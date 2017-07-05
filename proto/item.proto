@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "attribute.proto";
+
+message Item {
+  string name = 1;
+  repeated string images = 2;
+  double price = 3;
+  string description = 4;
+  repeated Attribute attributes = 5;
+}
