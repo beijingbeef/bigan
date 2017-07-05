@@ -30,7 +30,7 @@ node_modules
 npm-debug.log
 
 # Compiled Google Proto
-model/proto
+model/proto/*.js
 
 public/javascripts/jquery.min.js
 public/stylesheets/index.css
