@@ -1,0 +1,41 @@
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s10">
+        <input
+          [(ngModel)]="categoryName"
+          name="categoryName"
+          placeholder="Placeholder"
+          id="category"
+          type="text"
+          class="validate"
+        >
+        <label class="active" for="category">Category</label>
+      </div>
+    </div>
+    <div class="row">
+      <a (click)="newCategory($event)" class="waves-effect waves-light btn">add Category</a>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{category.name}}</td>
+        <td>
+          <a
+            (click)="deleteCategory(category)"
+            class="waves-effect waves-light btn"
+          >Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
